@@ -5,10 +5,14 @@ import com.example.unitconverter.WeightUnits;
 
 import java.util.HashMap;
 
+import static java.lang.Math.pow;
+
 public class ManageUnits {
     private ManageUnits() {
         throw new IllegalStateException("Utility class");
     }
+
+    public static final int PRECISION_DECIMAL = 6;
 
     public static Unit createLengthUnits() {
         HashMap<String, Double> lengthUnits = new HashMap<>();
@@ -37,6 +41,6 @@ public class ManageUnits {
     }
 
     public static double convert(Unit unitMeasurement, String unit, String other, double value) {
-        return unitMeasurement.convertTo(unit, other, value);
+        return Math.round(unitMeasurement.convertTo(unit, other, value) * pow(10.0, PRECISION_DECIMAL)) / pow(10.0, PRECISION_DECIMAL);
     }
 }
