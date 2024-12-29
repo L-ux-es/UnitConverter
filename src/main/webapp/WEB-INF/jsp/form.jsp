@@ -79,7 +79,7 @@
             </form>
             <form id="temperature-form" action="temperature" method="post">
                 <label for="value">Value</label>
-                <input type="number" name="valueToConvert" id="value">
+                <input type="number" name="value" id="value">
                 <jsp:include page="temperatureForm.jsp"/>
                 <button type="submit">Convert</button>
             </form>
