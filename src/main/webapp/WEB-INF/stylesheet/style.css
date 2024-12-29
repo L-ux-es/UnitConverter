@@ -1,3 +1,6 @@
+:root {
+    --unit-color: rgb(57, 102, 131);
+}
 
 * {
     margin: 0;
@@ -12,24 +15,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(53,53,69);
+    background: rgb(53, 53, 69);
+    font-size: 22px;
 }
 
 .unitConverter {
     width: 40%;
-    height: 50%;
     min-width: 385px;
     min-height: 384px;
-    border: 3px solid rgb(57,102,131);
+    border: 3px solid rgb(57, 102, 131);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     justify-content: space-around;
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
     color: white;
+    gap: 10px;
+}
 
+.container-form {
+    height: 100%;
+    flex-grow: 1;
 }
 
 .unit-button-container {
@@ -38,21 +46,18 @@
     justify-content: space-around;
 }
 
-.container-form {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+button {
+    font-size: inherit;
+    font-weight: bold;
+    color: var(--unit-color);
+    padding: 0 3px;
+    border: none;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.unit-button-container button:hover {
+    background: rgb(0, 68, 102);
+    color: white;
+    transition: all 0.4s;
 }
 
-#weight-form, #temperature-form {
-    display: none;
-}
 

@@ -10,6 +10,7 @@ celsius,fahrenheit,kelvin,ounce,mile">
     <title>Unit Converter</title>
     <style>
         <%@ include file="../stylesheet/style.css" %>
+        <%@ include file="../stylesheet/formStyle.css" %>
     </style>
     <script>
         <%@ include file="../js/showForm.js" %>
@@ -27,19 +28,19 @@ celsius,fahrenheit,kelvin,ounce,mile">
         <div class="container-form">
             <form id="length-form" action="length" method="post">
                 <label for="value">Value</label>
-                <input type="number" name="value" id="value">
+                <input type="number" name="value" id="value" required>
                 <jsp:include page="lengthForm.jsp"/>
                 <button type="submit">Convert</button>
             </form>
             <form id="weight-form" action="weight" method="post">
                 <label for="value">Value</label>
-                <input type="number" name="value" id="value">
+                <input type="number" name="value" id="value" required>
                 <jsp:include page="weightForm.jsp"/>
                 <button type="submit">Convert</button>
             </form>
             <form id="temperature-form" action="temperature" method="post">
                 <label for="value">Value</label>
-                <input type="number" name="value" id="value">
+                <input type="number" name="value" id="value" required>
                 <jsp:include page="temperatureForm.jsp"/>
                 <button type="submit">Convert</button>
             </form>
