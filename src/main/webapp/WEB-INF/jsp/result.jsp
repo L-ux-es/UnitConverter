@@ -4,8 +4,10 @@
     <title>Resultado</title>
 </head>
 <body>
-<h1>Resultado</h1>
-<p>${convertedValue}</p>
-<a href="form.jsp">Volver</a>
+<div class="result-container">
+    <h1>Result of your calculation</h1>
+    <p>${convertedValue}</p>
+    <a href="/">Reset</a>
+</div>
 </body>
 </html>
