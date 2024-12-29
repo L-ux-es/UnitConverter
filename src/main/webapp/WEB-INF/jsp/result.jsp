@@ -7,7 +7,7 @@
 <div class="result-container">
     <h1>Result of your calculation</h1>
     <p>${value} ${unit} = ${convertedValue} ${otherUnit}</p>
-    <a href="/">Reset</a>
+    <a href="${pageContext.request.contextPath}/">Reset</a>
 </div>
 </body>
 </html>
