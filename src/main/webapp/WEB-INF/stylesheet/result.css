@@ -1,0 +1,17 @@
+
+a{ font-weight: bold;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 20px;
+    width: fit-content;
+    align-self: center;
+    color: white;
+    background: rgb(0, 68, 102);
+}
+a:hover{
+    background: white;
+    color: rgb(0, 68, 102);
+    transition: all 0.4s;
+}
