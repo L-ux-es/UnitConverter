@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../resources/static/css/style.css">
     <title>Unit Converter</title>
-    <script src="../../../resources/static/js/showForm.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .unitConverter {
+            width: 80%;
+            height: 60%;
+            border: 3px solid green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*Eliminar esto , es solo para maqueta*/
+        .container-form {
+            height: 60%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #weight-form, #temperature-form {
+            display: none;
+        }
+    </style>
+    <script>
+        function showForm(formId) {
+            document.getElementById('length-form').style.display = 'none';
+            document.getElementById('weight-form').style.display = 'none';
+            document.getElementById('temperature-form').style.display = 'none';
+            document.getElementById(formId).style.display = 'flex';
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -18,10 +68,10 @@
             <form id="length-form" action="length" method="post">
                 <label for="value">Value</label>
                 <input type="number" name="value" id="value">
-               <jsp:include page="lengthForm.jsp"/>
+                <jsp:include page="lengthForm.jsp"/>
                 <button type="submit">Convert</button>
             </form>
-         <%--   <form id="weight-form" action="weight" method="post">
+            <form id="weight-form" action="weight" method="post">
                 <label for="value">Value</label>
                 <input type="number" name="value" id="value">
                 <jsp:include page="weightForm.jsp"/>
@@ -30,9 +80,9 @@
             <form id="temperature-form" action="temperature" method="post">
                 <label for="value">Value</label>
                 <input type="number" name="valueToConvert" id="value">
-               <jsp:include page="temperatureForm.jsp"/>
+                <jsp:include page="temperatureForm.jsp"/>
                 <button type="submit">Convert</button>
-            </form>--%>
+            </form>
         </div>
     </div>
 </div>
