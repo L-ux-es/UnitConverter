@@ -40,7 +40,7 @@ public class Unit {
     }
 
     public double convertTo(String unit, String otherUnit, double count) {
-        double result = 0.0;
+        double result;
         if (baseUnit.equals(unit)) {
             result = count * getUnit(otherUnit);
         } else if (baseUnit.equals(otherUnit)) {

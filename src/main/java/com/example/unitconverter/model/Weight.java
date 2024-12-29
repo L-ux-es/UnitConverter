@@ -4,8 +4,6 @@ import com.example.unitconverter.WeightUnits;
 
 import java.util.HashMap;
 
-import static java.lang.Math.pow;
-
 public class Weight extends Unit {
 
     public Weight() {

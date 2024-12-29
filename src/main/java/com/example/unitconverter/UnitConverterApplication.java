@@ -1,6 +1,5 @@
 package com.example.unitconverter;
 
-import com.example.unitconverter.model.Unit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
