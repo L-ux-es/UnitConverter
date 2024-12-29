@@ -18,18 +18,32 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background: rgb(53,53,69);
         }
 
         .unitConverter {
-            width: 80%;
-            height: 60%;
-            border: 3px solid green;
+            width: 40%;
+            height: 50%;
+            min-width: 385px;
+            min-height: 384px;
+            border: 3px solid rgb(57,102,131);
+            border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 10px;
+            justify-content: space-around;
+            background: rgb(0,0,0);
+            color: white;
+
         }
 
-        /*Eliminar esto , es solo para maqueta*/
+        .unit-button-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
         .container-form {
             height: 60%;
             width: 100%;
@@ -61,9 +75,11 @@
 <div class="container">
     <div class="unitConverter">
         <h1>Unit Converter</h1>
-        <button onclick="showForm('length-form')">Length</button>
-        <button onclick="showForm('weight-form')">Weight</button>
-        <button onclick="showForm('temperature-form')">Temperature</button>
+        <div class="unit-button-container">
+            <button onclick="showForm('length-form')">Length</button>
+            <button onclick="showForm('weight-form')">Weight</button>
+            <button onclick="showForm('temperature-form')">Temperature</button>
+        </div>
         <div class="container-form">
             <form id="length-form" action="length" method="post">
                 <label for="value">Value</label>
