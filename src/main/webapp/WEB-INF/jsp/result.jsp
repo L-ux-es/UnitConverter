@@ -6,7 +6,7 @@
 <body>
 <div class="result-container">
     <h1>Result of your calculation</h1>
-    <p>${convertedValue}</p>
+    <p>${value} ${unit} = ${convertedValue} ${otherUnit}</p>
     <a href="/">Reset</a>
 </div>
 </body>

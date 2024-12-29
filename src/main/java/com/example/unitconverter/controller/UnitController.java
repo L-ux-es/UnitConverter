@@ -17,9 +17,12 @@ public class UnitController {
     public String home() {
         return "form";
     }
+
     private final Length length;
     private final Weight weight;
     private final Temperature temperature;
+    private static final String CONVERTED_VALUE = "convertedValue";
+    private static final String RESULT_PAGE = "result";
 
     public UnitController() {
         length = new Length();
@@ -30,22 +33,30 @@ public class UnitController {
     @PostMapping("/length")
     public String convertLength(@RequestParam("value") double value, @RequestParam("lengthConvertFrom") String unit,
                                 @RequestParam("lengthConvertTo") String otherUnit, Model model) {
-        model.addAttribute("convertedValue", length.convertTo(unit, otherUnit, value));
-        return "result";
+        double result = length.convertTo(unit, otherUnit, value);
+        return returnResultPage(value, unit, otherUnit, result,model);
+    }
+
+    private String returnResultPage(double value, String unit, String otherUnit, double result, Model model) {
+        model.addAttribute("value", value);
+        model.addAttribute("unit", unit);
+        model.addAttribute("otherUnit", otherUnit);
+        model.addAttribute(CONVERTED_VALUE, result);
+        return RESULT_PAGE;
     }
 
     @PostMapping("/weight")
     public String convertWeight(@RequestParam("value") double value, @RequestParam("weightConvertFrom") String unit,
                                 @RequestParam("weightConvertTo") String otherUnit, Model model) {
-        model.addAttribute("convertedValue", weight.convertTo(unit, otherUnit, value));
-        return "result";
+        double result = weight.convertTo(unit, otherUnit, value);
+        return returnResultPage(value, unit, otherUnit, result, model);
     }
 
     @PostMapping("/temperature")
     public String convertTemperature(@RequestParam("value") double value, @RequestParam("temperatureConvertFrom") String unit,
                                      @RequestParam("temperatureConvertTo") String otherUnit, Model model) {
-        model.addAttribute("convertedValue", temperature.convertTo(unit, otherUnit, value));
-        return "result";
+        double result = temperature.convertTo(unit, otherUnit, value);
+        return returnResultPage(value, unit, otherUnit, result, model);
     }
 
 }
