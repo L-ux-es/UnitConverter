@@ -1,4 +1,4 @@
-package com.example.unitconverter;
+package com.example.unitconverter.model.enums;
 
 public enum LengthUnits {
     MILLIMETER("millimeter"),

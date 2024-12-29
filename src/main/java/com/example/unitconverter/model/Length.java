@@ -1,6 +1,6 @@
 package com.example.unitconverter.model;
 
-import com.example.unitconverter.LengthUnits;
+import com.example.unitconverter.model.enums.LengthUnits;
 
 import java.util.HashMap;
 

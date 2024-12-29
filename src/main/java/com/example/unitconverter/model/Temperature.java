@@ -1,6 +1,6 @@
 package com.example.unitconverter.model;
 
-import com.example.unitconverter.TemperatureUnits;
+import com.example.unitconverter.model.enums.TemperatureUnits;
 
 import static java.lang.Math.pow;
 

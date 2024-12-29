@@ -1,6 +1,6 @@
 package com.example.unitconverter.model;
 
-import com.example.unitconverter.WeightUnits;
+import com.example.unitconverter.model.enums.WeightUnits;
 
 import java.util.HashMap;
 

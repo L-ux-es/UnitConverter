@@ -1,4 +1,4 @@
-package com.example.unitconverter;
+package com.example.unitconverter.model.enums;
 
 public enum TemperatureUnits {
     CELSIUS("celsius"),
