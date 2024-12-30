@@ -1,11 +1,27 @@
-
+.result-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+}
+#result {
+    height: 100%;
+    color: white;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 23px;
+}
 a{ font-weight: bold;
     border: none;
     text-decoration: none;
     border-radius: 8px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 23px;
     width: fit-content;
+    margin-top: 10px;
     align-self: center;
     color: white;
     background: rgb(0, 68, 102);

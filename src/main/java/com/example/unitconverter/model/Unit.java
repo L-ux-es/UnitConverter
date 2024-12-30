@@ -31,22 +31,28 @@ public class Unit {
     protected void setPrecisionDecimal(int precisionDecimal) {
         this.precisionDecimal = precisionDecimal;
     }
+
     public int getPrecisionDecimal() {
         return precisionDecimal;
     }
 
     public double getUnit(String unit) {
-        return units.get(unit);
+        return units.get(unit.toLowerCase());
     }
 
     public double convertTo(String unit, String otherUnit, double count) {
-        double result;
-        if (baseUnit.equals(unit)) {
-            result = count * getUnit(otherUnit);
-        } else if (baseUnit.equals(otherUnit)) {
-            result = count / getUnit(unit);
-        } else {
-            result = count / getUnit(unit) * getUnit(otherUnit);
+        double result = 0.0;
+        if (units.containsKey(unit.toLowerCase()) && units.containsKey(otherUnit.toLowerCase())) {
+            if (unit.equalsIgnoreCase(otherUnit)) {
+                return count;
+            }
+            if (baseUnit.equalsIgnoreCase(unit)) {
+                result = count * getUnit(otherUnit);
+            } else if (baseUnit.equalsIgnoreCase(otherUnit)) {
+                result = count / getUnit(unit);
+            } else if (units.containsKey(unit.toLowerCase()) && units.containsKey(otherUnit.toLowerCase())) {
+                result = count / getUnit(unit) * getUnit(otherUnit);
+            }
         }
         return Math.round(result * pow(10.0, precisionDecimal)) / pow(10.0, precisionDecimal);
     }

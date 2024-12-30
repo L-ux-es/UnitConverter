@@ -23,6 +23,8 @@ class UnitConverterApplicationTests {
         Assertions.assertEquals(roundToPrecision(36, length.getPrecisionDecimal()), length.convertTo(LengthUnits.YARD.toString(), LengthUnits.INCH.toString(), 1.0));
         Assertions.assertEquals(roundToPrecision(1000.0, length.getPrecisionDecimal()), length.convertTo(LengthUnits.METER.toString(), LengthUnits.MILLIMETER.toString(), 1.0));
         Assertions.assertEquals(roundToPrecision(63360.0, length.getPrecisionDecimal()), length.convertTo(LengthUnits.MILE.toString(), LengthUnits.INCH.toString(), 1.0));
+        Assertions.assertEquals(roundToPrecision(0.0, length.getPrecisionDecimal()), length.convertTo(LengthUnits.MILE.toString(), "none", 1.0));
+        Assertions.assertEquals(roundToPrecision(12.01, length.getPrecisionDecimal()), length.convertTo(LengthUnits.MILE.toString(), LengthUnits.MILE.toString(), 12.01));
     }
 
     @Test
@@ -45,6 +47,11 @@ class UnitConverterApplicationTests {
         Assertions.assertEquals(roundToPrecision(274.15, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.FAHRENHEIT.toString(), TemperatureUnits.KELVIN.toString(), 33.8));
         Assertions.assertEquals(roundToPrecision(33.8, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.KELVIN.toString(), TemperatureUnits.FAHRENHEIT.toString(), 274.15));
         Assertions.assertEquals(roundToPrecision(1.0, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.KELVIN.toString(), TemperatureUnits.CELSIUS.toString(), 274.15));
+        Assertions.assertEquals(roundToPrecision(-253.15, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.KELVIN.toString(), TemperatureUnits.CELSIUS.toString(), 20));
+        Assertions.assertEquals(roundToPrecision(-369.67, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.KELVIN.toString(), TemperatureUnits.FAHRENHEIT.toString(), 50));
+        Assertions.assertEquals(roundToPrecision(0.0, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.KELVIN.toString(), "none", 50));
+        Assertions.assertEquals(roundToPrecision(50.0, temperature.getPrecisionDecimal()), temperature.convertTo(TemperatureUnits.KELVIN.toString(), TemperatureUnits.KELVIN.toString(), 50));
+
     }
 
     public double roundToPrecision(double value, int precision) {
