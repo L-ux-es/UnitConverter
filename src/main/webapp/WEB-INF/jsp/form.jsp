@@ -40,7 +40,7 @@ celsius,fahrenheit,kelvin,ounce,mile">
             </form>
             <form id="temperature-form" action="temperature" method="post">
                 <label for="value">Value</label>
-                <input type="text" inputmode="numeric" pattern="(\-|\d)\d+\.\d+|\d+" name="value" id="value" placeholder="-1.50" required/>
+                <input type="text" inputmode="numeric" pattern="^-?\d+(\.\d+)?$" name="value" id="value" placeholder="-1.50" required/>
                 <jsp:include page="temperatureForm.jsp"/>
                 <button type="submit">Convert</button>
             </form>
