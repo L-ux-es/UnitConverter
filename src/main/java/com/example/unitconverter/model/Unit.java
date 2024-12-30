@@ -42,15 +42,17 @@ public class Unit {
 
     public double convertTo(String unit, String otherUnit, double count) {
         double result = 0.0;
-        if (unit.equalsIgnoreCase(otherUnit)) {
-            return count;
-        }
-        if (baseUnit.equalsIgnoreCase(unit)) {
-            result = count * getUnit(otherUnit);
-        } else if (baseUnit.equalsIgnoreCase(otherUnit)) {
-            result = count / getUnit(unit);
-        } else if (units.containsKey(unit.toLowerCase()) && units.containsKey(otherUnit.toLowerCase())) {
-            result = count / getUnit(unit) * getUnit(otherUnit);
+        if (units.containsKey(unit.toLowerCase()) && units.containsKey(otherUnit.toLowerCase())) {
+            if (unit.equalsIgnoreCase(otherUnit)) {
+                return count;
+            }
+            if (baseUnit.equalsIgnoreCase(unit)) {
+                result = count * getUnit(otherUnit);
+            } else if (baseUnit.equalsIgnoreCase(otherUnit)) {
+                result = count / getUnit(unit);
+            } else if (units.containsKey(unit.toLowerCase()) && units.containsKey(otherUnit.toLowerCase())) {
+                result = count / getUnit(unit) * getUnit(otherUnit);
+            }
         }
         return Math.round(result * pow(10.0, precisionDecimal)) / pow(10.0, precisionDecimal);
     }
