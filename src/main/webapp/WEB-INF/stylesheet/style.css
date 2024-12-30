@@ -17,6 +17,7 @@
     align-items: center;
     background: rgb(53, 53, 69);
     font-size: 22px;
+    min-width: 390px;
 }
 
 .unitConverter {
