@@ -4,7 +4,7 @@
     <title>Length</title>
 </head>
 <body>
-<label for="lengthConvertFrom">Convertir de </label>
+<label for="lengthConvertFrom">Convert from</label>
 <select class="length" id="lengthConvertFrom" name="lengthConvertFrom">
     <option value="" disabled>Select a length</option>
     <option value="kilometer" selected>Kilometer</option>
@@ -16,7 +16,7 @@
     <option value="foot">Foot</option>
     <option value="mile">Mile</option>
 </select>
-<label for="lengthConvertTo">Convertir a </label>
+<label for="lengthConvertTo">Convert to</label>
 <select class="length" id="lengthConvertTo" name="lengthConvertTo">
     <option value="" disabled>Select a length</option>
     <option value="kilometer">Kilometer</option>

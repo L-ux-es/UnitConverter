@@ -4,14 +4,14 @@
     <title>Temperature</title>
 </head>
 <body>
-<label for="temperatureConvertFrom">Convertir de </label>
+<label for="temperatureConvertFrom">Convert from</label>
 <select class="length" id="temperatureConvertFrom" name="temperatureConvertFrom">
     <option value="" disabled>Select a temperature</option>
     <option value="celsius" selected>Celsius</option>
     <option value="fahrenheit">Fahrenheit</option>
     <option value="kelvin">Kelvin</option>
 </select>
-<label for="temperatureConvertTo">Convertir a </label>
+<label for="temperatureConvertTo">Convert to</label>
 <select class="length" id="temperatureConvertTo" name="temperatureConvertTo">
     <option value="" disabled>Select a temperature</option>
     <option value="celsius">Celsius</option>
