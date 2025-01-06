@@ -38,7 +38,7 @@ mnv clean install
 4. Start server
 5. Open web browser and navigate to the page:
  - For Tomcat:`http://localhost:8080/[Application-Context]`
- - For spring Boot: `https://localhost/8080`
+ - For Spring Boot: `https://localhost/8080`
 
 
 
